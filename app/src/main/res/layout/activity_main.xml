@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:ignore="MissingConstraints,HardcodedText">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginStart="@dimen/margin_twice"
+        android:layout_marginEnd="@dimen/margin_twice"
+        android:id="@+id/ll_collapsing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/tv_bot_working"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bot_working"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="@dimen/margin_twice_half"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/v_center_line" />
+
+        <TextView
+            android:layout_marginTop="@dimen/margin_twice_half"
+            android:id="@+id/tv_working_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27시간 12분 51초"
+            android:textColor="@color/colorBlack"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/v_center_line" />
+
+        <View
+            android:visibility="invisible"
+            android:id="@+id/v_center_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/colorPink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/sw_bot_power_collapsing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textOff=""
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorWhite"
+        android:backgroundTint="@color/colorWhite">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/colorBlack"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Switch
+                android:id="@+id/sw_bot_power_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_collapsing_layout" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:src="@drawable/ic_baseline_settings_24"
+        android:tint="@color/colorWhite"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="@dimen/margin_twice_half"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_add_bot"
+        app:layout_constraintEnd_toEndOf="@+id/fab_add"
+        app:layout_constraintStart_toStartOf="@+id/fab_add"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default"
+        android:src="@drawable/ic_baseline_reply_24"
+        android:tint="@color/colorWhite"
+        android:visibility="gone"
+        app:borderWidth="0dp"
+        app:elevation="@dimen/margin_twice_half"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/fab_add"
+        app:layout_constraintEnd_toEndOf="@+id/fab_add"
+        app:layout_constraintStart_toStartOf="@+id/fab_add"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="@color/colorWhite"
+        app:borderWidth="0dp"
+        app:elevation="@dimen/margin_twice_half"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

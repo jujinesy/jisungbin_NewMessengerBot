@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+           tools:ignore="TypographyEllipsis">
+
+    <string name="app_name">ChatBot</string>
+
+    <string name="copied_clipboard">클립보드에 복사되었습니다.</string>
+    <string name="bot_working">봇이 작동된지...</string>
+
+    <string name="dashboard">대시보드</string>
+    <string name="setting">설정</string>
+
+    <string name="fixed">고정됨</string>
+    <string name="bot">봇</string>
+
+    <string name="view">보기</string>
+    <string name="remove">삭제</string>
+
+    <string name="now_bot_working">봇 작동중...</string>
+    <string name="now_bot_stop">현재 봇이 꺼져있습니다.</string>
+    <string name="bot_off">봇 종료</string>
+    <string name="bot_start">봇 시작</string>
+    <string name="string_close">닫기</string>
+    <string name="bot_work_stop">봇 작동이 중지됩니다.</string>
+    <string name="bot_work_start">봇 작동이 시작됩니다.</string>
+
+    <string name="bot_none">추가된 봇이 없어요</string>
+
+    <string name="power_on">Power On</string>
+    <string name="power_off">Power Off</string>
+    <string name="cant_load_session">메세지를 전송할 방의 세션을 가져오지 못했습니다.</string>
+
+    <string name="bot_name">이름</string>
+    <string name="edit">수정</string>
+    <string name="share">공유</string>
+    <string name="delete">삭제</string>
+    <string name="danger">위험</string>
+
+    <string name="deleted">삭제되었습니다.</string>
+    <string name="everyday">매일</string>
+    <string name="last_run_time">마지막 작동: 07.17. / 17\' 30\'\'</string>
+    <string name="reply_gaming">게임중 답장</string>
+</resources>

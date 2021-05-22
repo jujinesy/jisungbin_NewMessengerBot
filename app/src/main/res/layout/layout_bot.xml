@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main_view"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="@dimen/margin_default"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/bg_round_layout"
+    android:backgroundTint="@color/colorTwiceLightGray"
+    tools:backgroundTint="@color/colorLightGray"
+    tools:ignore="ContentDescription,UselessParent,MissingConstraints">
+
+    <com.sungbin.sungbintool.ui.TagableRoundImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/lg_outline_kakaotalk"
+        app:triv_imageRadius="@dimen/margin_half"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_bot_run_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/everyday"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toTopOf="@+id/v_center_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:visibility="invisible"
+        android:id="@+id/v_center_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/colorPink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/v_center_line" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="@string/reply_gaming"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:layout_constraintBottom_toTopOf="@+id/v_center_line"
+        app:layout_constraintEnd_toStartOf="@+id/sw_power"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_last_run_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/last_run_time"
+        android:textColor="@color/colorGray"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_icon"
+        app:layout_constraintTop_toBottomOf="@+id/v_center_line" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
